@@ -93,3 +93,15 @@ WHERE id = 3;
 // this will delete the entire row 
 DELETE FROM candidates
 WHERE first_name = "Montague";
+
+// creates .gitignore and writes node_module to the file
+echo "node_modules/" > .gitignore
+
+// initialize node js
+npm init --y
+
+// this might be why node was not working
+"scripts": {
+  "test": "jest",
+  "start": "node server.js"
+},
