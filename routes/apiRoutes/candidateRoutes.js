@@ -4,6 +4,7 @@ const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
 // Get all candidates and their party affiliation
+// originally app.get('/api/candidates')
 router.get('/candidates', (req, res) => {
   const sql = `SELECT candidates.*, parties.name 
                 AS party_name 
@@ -24,6 +25,7 @@ router.get('/candidates', (req, res) => {
 });
 
 // Get single candidate with party affiliation
+// originally app.get('/api/candidate/:id')
 router.get('/candidate/:id', (req, res) => {
   const sql = `SELECT candidates.*, parties.name 
                AS party_name 
