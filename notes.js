@@ -3,6 +3,7 @@
 // quit to exit 
 // npm i --save mysql2  ( to use source )
 // crud creating, reading, updating, and deleting
+// ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
 
 const { application } = require("express");
 const db = require("./db/connection");
@@ -263,7 +264,7 @@ LEFT JOIN parties ON candidates.party_id = parties.id;
 // inner join , matching id from both tables
 // left join, matching id from the joinee
 // right join , matching id from the joiner
-// full outer join, ???
+// full outer join, adding two tables together. 
 
 // only returns the party's name
 // * wildcard unique to sql , does not work in js
